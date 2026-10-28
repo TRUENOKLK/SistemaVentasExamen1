@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VentaFácil - Sistema de ventas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+
+       
+        <aside class="sidebar">
+            <div class="brand">
+                <h1>VentaFácil</h1>
+                <p>Sistema de ventas</p>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#inicio" class="nav-item">Inicio</a>
+                <a href="#productos" class="nav-item">Productos</a>
+                <a href="#clientes" class="nav-item">Clientes</a>
+                <a href="#ventas" class="nav-item">Ventas</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+
+      
+            <section id="inicio">
+                <header class="page-header">
+                    <h2>Inicio</h2>
+                </header>
+                <div class="section-body">
+                    <div class="card-box">
+                        <h3>Bienvenido a VentaFácil</h3>
+                        <p class="subtitle">Desarrollar un sistema que registre ventas, clientes y productos de forma rápida y confiable.</p>
+                    </div>
+                    <div class="summary-cards">
+                        <div class="summary-card">
+                            <span class="card-title">Ventas hoy</span>
+                            <span class="card-value">C$ 8,000</span>
+                        </div>
+                        <div class="summary-card">
+                            <span class="card-title">Productos</span>
+                            <span class="card-value">63</span>
+                        </div>
+                        <div class="summary-card">
+                            <span class="card-title">Clientes</span>
+                            <span class="card-value">3</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+            <section id="productos">
+                <header class="page-header">
+                    <h2>Productos</h2>
+                </header>
+                <div class="section-body">
+                    <div class="card-box">
+                        <h3>Registros</h3>
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Código</th>
+                                        <th>Producto</th>
+                                        <th>Precio</th>
+                                        <th>Stock</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabla-prod">
+                                    <tr><td>001</td><td>Taladro</td><td>C$ 2,500</td><td>8</td></tr>
+                                    <tr><td>002</td><td>Martillo</td><td>C$ 350</td><td>15</td></tr>
+                                    <tr><td>003</td><td>Cinta métrica</td><td>C$ 120</td><td>40</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card-box">
+                        <h3>Nuevo registro</h3>
+                        <form>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="prod-codigo">Código</label>
+                                    <input id="prod-codigo" type="text" placeholder="Ej: 004" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="prod-nombre">Producto</label>
+                                    <input id="prod-nombre" type="text" placeholder="Ej: Destornillador" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="prod-precio">Precio</label>
+                                    <input id="prod-precio" type="text" placeholder="Ej: C$ 90" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="prod-stock">Stock</label>
+                                    <input id="prod-stock" type="text" placeholder="Ej: 25" required>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-primary">Guardar</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+       
+            <section id="clientes">
+                <header class="page-header">
+                    <h2>Clientes</h2>
+                </header>
+                <div class="section-body">
+                    <div class="card-box">
+                        <h3>Registros</h3>
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Cliente</th>
+                                        <th>Teléfono</th>
+                                        <th>Compras</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabla-cli">
+                                    <tr><td>C01</td><td>Ana Pérez</td><td>8888-1111</td><td>5</td></tr>
+                                    <tr><td>C02</td><td>Luis Mora</td><td>8777-2222</td><td>2</td></tr>
+                                    <tr><td>C03</td><td>Ferretería Sol</td><td>2222-3333</td><td>12</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card-box">
+                        <h3>Nuevo registro</h3>
+                        <form>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="cli-id">ID</label>
+                                    <input id="cli-id" type="text" placeholder="Ej: C04" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cli-nombre">Cliente</label>
+                                    <input id="cli-nombre" type="text" placeholder="Ej: Juan López" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cli-telefono">Teléfono</label>
+                                    <input id="cli-telefono" type="text" placeholder="Ej: 8555-4444" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cli-compras">Compras</label>
+                                    <input id="cli-compras" type="text" placeholder="Ej: 1" required>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-primary">Guardar</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+           
+            <section id="ventas">
+                <header class="page-header">
+                    <h2>Ventas</h2>
+                </header>
+                <div class="section-body">
+                    <div class="card-box">
+                        <h3>Registros</h3>
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Factura</th>
+                                        <th>Fecha</th>
+                                        <th>Cliente</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabla-ven">
+                                    <tr><td>F-001</td><td>2026-10-20</td><td>Ana Pérez</td><td>C$ 2,850</td></tr>
+                                    <tr><td>F-002</td><td>2026-10-21</td><td>Luis Mora</td><td>C$ 350</td></tr>
+                                    <tr><td>F-003</td><td>2026-10-22</td><td>Ferretería Sol</td><td>C$ 4,800</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card-box">
+                        <h3>Nuevo registro</h3>
+                        <form>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="ven-factura">Factura</label>
+                                    <input id="ven-factura" type="text" placeholder="Ej: F-004" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ven-fecha">Fecha</label>
+                                    <input id="ven-fecha" type="date" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ven-cliente">Cliente</label>
+                                    <input id="ven-cliente" type="text" placeholder="Ej: Ana Pérez" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ven-total">Total (C$)</label>
+                                    <input id="ven-total" type="text" placeholder="Ej: C$ 1,200" required>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-primary">Guardar</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+
+</html>
